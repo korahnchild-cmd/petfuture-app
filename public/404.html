@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Petfuture</title>
+  <script>
+    // SPA 라우팅 — GitHub Pages 404 처리
+    var l = window.location;
+    l.replace(
+      l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
+      l.pathname.split('/').slice(0, 2).join('/') +
+      '/?q=' + encodeURIComponent(l.pathname.slice(1) + (l.search ? l.search : '') + l.hash)
+    );
+  </script>
+</head>
+<body></body>
+</html>
